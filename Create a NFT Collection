@@ -3,7 +3,6 @@ let nftCollection = [];
 
 // Step 2: Create a function to mint NFTs
 function mintNFT(name, description, image, owner) {
-    // Create an NFT object using the parameters passed for metadata
     const nft = {
         name: name,
         description: description,
@@ -11,13 +10,11 @@ function mintNFT(name, description, image, owner) {
         owner: owner
     };
 
-    // Store the NFT object in the nftCollection array
     nftCollection.push(nft);
 }
 
 // Step 3: Create a function to list all NFTs
 function listNFTs() {
-    // Loop through the nftCollection array and print each NFT's metadata
     nftCollection.forEach((nft, index) => {
         console.log(`NFT ${index + 1}:`);
         console.log(`  Name: ${nft.name}`);
@@ -30,7 +27,6 @@ function listNFTs() {
 
 // Step 4: Create a function to get the total supply of NFTs
 function getTotalSupply() {
-    // Return the length of the nftCollection array
     return nftCollection.length;
 }
 
